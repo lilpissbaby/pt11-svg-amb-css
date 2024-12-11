@@ -1,0 +1,91 @@
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeToTransparent {
+    0% {
+        fill: black; 
+        opacity: 1; 
+    }
+    100% {
+        fill: transparent; 
+        opacity: 0;
+    }
+}
+
+@keyframes rainbowColors {
+    0% { fill: red; }
+    16.67% { fill: orange; }
+    33.33% { fill: yellow; }
+    50% { fill: green; }
+    66.67% { fill: blue; }
+    83.33% { fill: indigo; }
+    100% { fill: violet; }
+}
+
+.rayas {
+    animation: rainbowColors 0.58s linear infinite; /* Cambia el tiempo (5s) según prefieras */
+}
+
+#apple-cuerpo, #apple-hoja{
+    animation: fadeInOut 3s infinite;
+}
+
+#apple-hoja{
+    animation: rotate 3600s infinite;
+    transform-origin: center;
+}
+
+svg{
+    border: 1px solid black;
+    margin: auto;
+}
+
+.petal{
+    animation: fadeToTransparent 3s ease-in-out infinite; 
+}
+
+#kuoyi path {
+    transition: transform 0.3s, fill 0.3s; /* Sense aquesta propietat el canvi es brusc */
+  }
+
+  #kuoyi path:hover {
+    transform: scale(1.3);
+    fill: gold;
+  }
+
+
+
+  /* Animación cuando se hace hover sobre cada path */
+  .custom-gris:hover {
+    animation: fadeToTransparent 3s ease-in-out infinite; 
+    
+  }
+
+  .custom-azul:hover {
+    animation: fadeToTransparent 3s ease-in-out infinite; 
+    
+  }
+
+  .custom-azul, .custom-gris{
+    transition: transform 1s, fill 0.3s;
+  }
+
+  body{
+    display: flex;
+
+  }
